@@ -25,3 +25,13 @@ jobs:
 
     - name: Run Selenium tests
       run: npm run test
+
+    - name: Save Debug Log
+      if: always() # Ensure this step runs even if previous steps fail
+      run: mv /home/runner/.npm/_logs/* $(github.workspace)/debug.log
+    - name: Upload Debug Log
+      if: always() # Ensure this step runs even if previous steps fail
+      uses: actions/upload-artifact@v2
+      with:
+        name: debug-log
+        path: $(github.workspace)/debug.log

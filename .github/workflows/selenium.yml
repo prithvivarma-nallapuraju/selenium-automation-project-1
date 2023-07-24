@@ -28,10 +28,11 @@ jobs:
 
     - name: Save Debug Log
       if: always() # Ensure this step runs even if previous steps fail
-      run: mv /home/runner/.npm/_logs/* $(github.workspace)/debug.log
+      run: mkdir -p $GITHUB_WORKSPACE/logs && mv /home/runner/.npm/_logs/* $GITHUB_WORKSPACE/logs/
+
     - name: Upload Debug Log
       if: always() # Ensure this step runs even if previous steps fail
       uses: actions/upload-artifact@v2
       with:
         name: debug-log
-        path: $(github.workspace)/debug.log
+        path: $GITHUB_WORKSPACE/logs

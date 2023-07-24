@@ -1,7 +1,7 @@
 const { until, By } = require('selenium-webdriver')
-// const { screenshot } = require('../../utils/Screenshot')
-// const mainpath = require('path')
-
+const { screenshot } = require('../../utils/Screenshot')
+const mainpath = require('path')
+require('dotenv').config({path: mainpath.join(__dirname,'../../.env')})
 let screenshotPath
 
 const getMobilePageTitle = async (brwsr, driver) => {
@@ -11,8 +11,8 @@ const getMobilePageTitle = async (brwsr, driver) => {
         await driver.wait(until.elementIsVisible(mobileElement))
         await mobileElement.click()
         
-        if(process.env.CAPTURE_SCREENSHOTS === true){
-            screenshotPath = mainpath.join(__dirname, `../../outputs/${brwsr}/Day1`, 'mobile_page.png')
+        if(process.env.CAPTURE_SCREENSHOTS === 'true'){
+            screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/Day1`, 'mobile_page.png')
             await screenshot(driver, screenshotPath)
         }
 

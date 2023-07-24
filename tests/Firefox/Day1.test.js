@@ -1,8 +1,17 @@
 const getHomePageTitlePath = '../../Scripts/Day1/GetHomePageTitle'
 const getMobilePageTitlePath = '../../Scripts/Day1/GetMobilePageTitle'
 const { driverSetup } = require('../../utils/Driver')
+const sortByNamePath = '../../Scripts/Day1/SortByName'
 
-let script, result,  driver = driverSetup('firefox')
+let script, result,  driver
+
+beforeAll(() => {
+    driver = driverSetup('firefox')
+  });
+  
+afterAll(() => {
+    driver.quit()
+  });
 
 describe('verifying the functionalities given on Day1 with firefox browser', ()=> {
     test('get the HomePage title using firefox browser', async () => {
@@ -15,5 +24,11 @@ describe('verifying the functionalities given on Day1 with firefox browser', ()=
         script = require(getMobilePageTitlePath)
         result = await script.getMobilePageTitle('firefox', driver)
         expect(result).toBe('Mobile')
+    }, 100000)
+
+    test('sort the mobiles by ascending order using firefox browser', async () => {
+        script = require(sortByNamePath)
+        result = await script.sortByName('firefox', driver)
+        expect(result).toBe(true)
     }, 100000)
 })

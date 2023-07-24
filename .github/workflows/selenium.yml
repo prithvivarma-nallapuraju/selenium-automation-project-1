@@ -18,7 +18,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # Change this to your desired Node.js version
+        node-version: '18' # Change this to your desired Node.js version
 
     - name: Install dependencies
       run: npm install
@@ -26,16 +26,3 @@ jobs:
     - name: Run Selenium tests
       run: npm run test
 
-     # Save the debug log files as an artifact in a subdirectory within the workspace
-    - name: Save Debug Logs
-      if: always() # Ensure this step runs even if previous steps fail
-      run: |
-        mkdir -p $GITHUB_WORKSPACE/logs
-        mv /home/runner/.npm/_logs/* $GITHUB_WORKSPACE/logs/ || true
-
-    - name: Upload Debug Logs
-      if: always() # Ensure this step runs even if previous steps fail
-      uses: actions/upload-artifact@v2
-      with:
-        name: debug-log
-        path: $GITHUB_WORKSPACE/logs

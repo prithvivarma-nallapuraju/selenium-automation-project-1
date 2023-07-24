@@ -3,7 +3,9 @@ name: Selenium Tests
 on:
   push:
     branches:
-      - tests # Change this to your default branch if it's not 'main'
+      - main 
+      - tests
+      - day1Tests
 
 jobs:
   test:
@@ -16,10 +18,11 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # Change this to your desired Node.js version
+        node-version: '20' # Change this to your desired Node.js version
 
     - name: Install dependencies
       run: npm install
 
     - name: Run Selenium tests
-      run: npm run test # Replace 'npm test' with the command to run your Selenium tests
+      run: npm run test
+

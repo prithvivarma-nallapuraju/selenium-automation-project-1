@@ -12,11 +12,9 @@ const driverSetup = (brwsr) => {
         case "chrome": {
             options = new chrome.Options()
             options.addArguments(
-                '--start-maximized',
-                '--disable-infobars'
+                '--headless'
             )
-
-            driver = new Builder()
+            driver =  new Builder()
                             .forBrowser(Browser.CHROME)
                             .setChromeOptions(options)
                             .build()
@@ -27,11 +25,9 @@ const driverSetup = (brwsr) => {
         case "edge": {
             options = new edge.Options()
             options.addArguments(
-                '--start-maximized',
-                '--disable-infobars'
+                '--headless'
             )
-
-            driver = new Builder()
+            driver =  new Builder()
                             .forBrowser(Browser.EDGE)
                             .setEdgeOptions(options)
                             .build()
@@ -40,10 +36,10 @@ const driverSetup = (brwsr) => {
         }
 
         case "firefox": {
+
             options = new firefox.Options()
             options.addArguments(
-                '--start-maximized',
-                '--disable-infobars'
+                '--headless'
             )
 
             driver = new Builder()

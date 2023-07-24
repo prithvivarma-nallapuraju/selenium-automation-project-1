@@ -10,8 +10,8 @@ const getMobilePageTitle = async (brwsr, driver) => {
         const mobileElement = await driver.wait(until.elementLocated(By.xpath("(//a[@class='level0 '])[1]")))
         await driver.wait(until.elementIsVisible(mobileElement))
         await mobileElement.click()
-        // screenshotPath = mainpath.join(__dirname, `../../outputs/${brwsr}/Day1`, 'mobile_page.png')
-        // await screenshot(driver, screenshotPath)
+        screenshotPath = mainpath.join(__dirname, `../../outputs/${brwsr}/Day1`, 'mobile_page.png')
+        await screenshot(driver, screenshotPath)
         
         const title = driver.getTitle()
         return title

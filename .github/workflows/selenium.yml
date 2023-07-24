@@ -3,7 +3,9 @@ name: Selenium Tests
 on:
   push:
     branches:
-      - tests # Change this to your default branch if it's not 'main'
+      - main 
+      - tests
+      - day1Tests
 
 jobs:
   test:
@@ -22,4 +24,4 @@ jobs:
       run: npm install
 
     - name: Run Selenium tests
-      run: npm run test # Replace 'npm test' with the command to run your Selenium tests
+      run: npm run test 

@@ -3,15 +3,8 @@ const getMobilePageTitlePath = '../../Scripts/Day1/GetMobilePageTitle'
 const { driverSetup } = require('../../utils/Driver')
 const sortByNamePath = '../../Scripts/Day1/SortByName'
 
-let script, result, driver
+let script, result, driver = driverSetup('chrome')
 
-beforeAll(() => {
-    driver = driverSetup('chrome')
-  });
-  
-afterAll(async () => {
-    await driver.quit()
-  });
 
 describe('verifying the functionalities given on Day1 with chrome browser', ()=> {
     test('get the HomePage title using chrome browser', async () => {

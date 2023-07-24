@@ -29,6 +29,8 @@ const sortByName = async (brwsr, driver) => {
     }catch(error){
         console.error
         return false
+    }finally {
+        driver.quit()
     }
 }
 

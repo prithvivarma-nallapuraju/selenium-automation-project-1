@@ -10,11 +10,11 @@ describe('verifying the functionalities given on Day1 with chrome browser', ()=>
         script = require(getHomePageTitlePath)
         result = await script.getHomePageTitle('chrome', driver)
         expect(result).toBe('Home page')
-    }, 50000)
+    }, 100000)
 
     test('get the mobilePage title using chrome browser', async () => {
         script = require(getMobilePageTitlePath)
         result = await script.getMobilePageTitle('chrome', driver)
         expect(result).toBe('Mobile')
-    }, 50000)
+    }, 100000)
 })

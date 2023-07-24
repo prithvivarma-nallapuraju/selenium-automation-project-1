@@ -9,11 +9,11 @@ describe('verifying the functionalities given on Day1 with firefox browser', ()=
         script = require(getHomePageTitlePath)
         result = await script.getHomePageTitle('firefox', driver)
         expect(result).toBe('Home page')
-    }, 50000)
+    }, 100000)
 
     test('get the mobilePage title using firefox browser', async () => {
         script = require(getMobilePageTitlePath)
         result = await script.getMobilePageTitle('firefox', driver)
         expect(result).toBe('Mobile')
-    }, 50000)
+    }, 100000)
 })

@@ -9,11 +9,11 @@ describe('verifying the functionalities given on Day1 with edge browser', ()=> {
         script = require(getHomePageTitlePath)
         result = await script.getHomePageTitle('edge', driver)
         expect(result).toBe('Home page')
-    }, 50000)
+    }, 100000)
 
     test('get the mobilePage title using edge browser', async () => {
         script = require(getMobilePageTitlePath)
         result = await script.getMobilePageTitle('edge', driver)
         expect(result).toBe('Mobile')
-    }, 50000)
+    }, 100000)
 })

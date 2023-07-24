@@ -6,7 +6,7 @@ let screenshotPath
 
 const getMobilePageTitle = async (brwsr, driver) => {
     try{
-
+        await driver.manage().setTimeouts({ implicit: 10000 });
         const mobileElement = await driver.wait(until.elementLocated(By.xpath("(//a[@class='level0 '])[1]")))
         await driver.wait(until.elementIsVisible(mobileElement))
         await mobileElement.click()

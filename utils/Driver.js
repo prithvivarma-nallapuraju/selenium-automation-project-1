@@ -10,26 +10,26 @@ const driverSetup = (brwsr) => {
     switch(brwsr){
 
         case "chrome": {
-            options = new chrome.Options()
-            options.addArguments(
-                '--headless'
-            )
+            // options = new chrome.Options()
+            // options.addArguments(
+            //     '--headless'
+            // )
             driver =  new Builder()
                             .forBrowser(Browser.CHROME)
-                            .setChromeOptions(options)
+                          //  .setChromeOptions(options)
                             .build()
 
             break
         }
 
         case "edge": {
-            options = new edge.Options()
-            options.addArguments(
-                '--headless'
-            )
+            // options = new edge.Options()
+            // options.addArguments(
+            //     '--headless'
+            // )
             driver =  new Builder()
                             .forBrowser(Browser.EDGE)
-                            .setEdgeOptions(options)
+                            //.setEdgeOptions(options)
                             .build()
             
             break
@@ -37,14 +37,14 @@ const driverSetup = (brwsr) => {
 
         case "firefox": {
 
-            options = new fire.Options()
-            options.addArguments(
-                '--headless'
-            )
+            // options = new firefox.Options()
+            // options.addArguments(
+            //     '--headless'
+            // )
 
             driver = new Builder()
                             .forBrowser(Browser.FIREFOX)
-                            .setFirefoxOptions(options)
+                            //.setFirefoxOptions(options)
                             .build()
 
             break

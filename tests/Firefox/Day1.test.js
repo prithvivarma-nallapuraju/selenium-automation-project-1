@@ -4,7 +4,7 @@ const { driverSetup } = require('../../utils/Driver')
 
 let script, result,  driver = driverSetup('firefox')
 
-describe('verifying the functionalities given on Day1 with chrome browser', ()=> {
+describe('verifying the functionalities given on Day1 with firefox browser', ()=> {
     test('get the HomePage title using firefox browser', async () => {
         script = require(getHomePageTitlePath)
         result = await script.getHomePageTitle('firefox', driver)

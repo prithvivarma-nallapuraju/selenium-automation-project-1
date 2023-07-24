@@ -4,8 +4,8 @@ const { driverSetup } = require('../../utils/Driver')
 
 let script, result, driver = driverSetup('edge')
 
-describe('verifying the functionalities given on Day1 with chrome browser', ()=> {
-    test('get the HomePage title using chrome browser', async () => {
+describe('verifying the functionalities given on Day1 with edge browser', ()=> {
+    test('get the HomePage title using edge browser', async () => {
         script = require(getHomePageTitlePath)
         result = await script.getHomePageTitle('edge', driver)
         expect(result).toBe('Home page')

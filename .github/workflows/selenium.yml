@@ -26,11 +26,14 @@ jobs:
     - name: Run Selenium tests
       run: npm run test
 
-    - name: Save Debug Log
+     # Save the debug log files as an artifact in a subdirectory within the workspace
+    - name: Save Debug Logs
       if: always() # Ensure this step runs even if previous steps fail
-      run: mkdir -p $GITHUB_WORKSPACE/logs && mv /home/runner/.npm/_logs/* $GITHUB_WORKSPACE/logs/
+      run: |
+        mkdir -p $GITHUB_WORKSPACE/logs
+        mv /home/runner/.npm/_logs/* $GITHUB_WORKSPACE/logs/ || true
 
-    - name: Upload Debug Log
+    - name: Upload Debug Logs
       if: always() # Ensure this step runs even if previous steps fail
       uses: actions/upload-artifact@v2
       with:

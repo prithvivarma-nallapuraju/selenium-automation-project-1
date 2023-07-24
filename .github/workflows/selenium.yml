@@ -6,6 +6,7 @@ on:
       - main 
       - tests
       - day1Tests
+      - day2tests
 
 jobs:
   test:

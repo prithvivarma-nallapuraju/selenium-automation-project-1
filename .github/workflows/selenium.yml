@@ -1,9 +1,9 @@
-name: Selenium Test
+name: Selenium Tests
 
 on:
   push:
     branches:
-      - main # Change this to your default branch if it's not 'main'
+      - tests # Change this to your default branch if it's not 'main'
 
 jobs:
   test:

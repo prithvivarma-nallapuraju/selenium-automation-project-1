@@ -34,7 +34,6 @@ const driverSetup = (brwsr) => {
 
             driver = new Builder()
                             .forBrowser(Browser.SAFARI)
-                            .setSafariOptions(options)
                             .build()
 
             break

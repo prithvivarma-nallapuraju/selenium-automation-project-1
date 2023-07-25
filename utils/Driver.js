@@ -1,7 +1,4 @@
 const {Builder, Browser} = require('selenium-webdriver')
-const chrome = require('selenium-webdriver/chrome')
-const edge = require('selenium-webdriver/edge')
-const firefox = require('selenium-webdriver/firefox')
 
 let driver, options
 
@@ -33,6 +30,16 @@ const driverSetup = (brwsr) => {
             break
         }
 
+        case "safari": {
+
+            driver = new Builder()
+                            .forBrowser(Browser.SAFARI)
+                            .setSafariOptions(options)
+                            .build()
+
+            break
+        }
+        
 
         default: (console.error('invalid browser'))
     }

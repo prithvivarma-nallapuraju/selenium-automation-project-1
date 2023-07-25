@@ -2,6 +2,7 @@ const {Builder, Browser} = require('selenium-webdriver')
 const chrome = require('selenium-webdriver/chrome')
 const edge = require('selenium-webdriver/edge')
 const firefox = require('selenium-webdriver/firefox')
+const safari = require('selenium-webdriver/safari')
 
 let driver, options
 

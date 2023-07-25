@@ -3,9 +3,7 @@ const getMobilePageTitlePath = '../../Scripts/Day1/GetMobilePageTitle'
 const getCostOfSonyPath = '../../Scripts/Day2/GetCostOfSony'
 const clickOnSonyPath = '../../Scripts/Day2/ClickOnSony'
 const getPriceOnSonyPagePath = '../../Scripts/Day2/GetPriceOnSonyPage'
-
-//const { driverSetup } = require('../../utils/Driver')
-const { driverSetup } = require('../../utils/DriverHeadless')
+const {driverSetup} = require('../index.js')
 
 let script, result, driver = driverSetup('chrome')
 

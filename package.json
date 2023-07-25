@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest --runInBand tests/Chrome/*.test.js tests/Edge/*.test.js tests/Firefox/*.test.js "
+    "test": "npx jest --runInBand tests/Chrome/*.test.js tests/Edge/*.test.js tests/Firefox/*.test.js",
+    "testWithSafari": "npx jest --runInBand tests/Chrome/*.test.js tests/Edge/*.test.js tests/Firefox/*.test.js tests/Safari/*.test.js"
   },
   "keywords": [],
   "author": "",

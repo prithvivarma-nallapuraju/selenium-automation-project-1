@@ -1,7 +1,6 @@
 const getHomePageTitlePath = '../../Scripts/Day1/GetHomePageTitle'
 const getMobilePageTitlePath = '../../Scripts/Day1/GetMobilePageTitle'
-//const { driverSetup } = require('../../utils/Driver')
-const { driverSetup } = require('../../utils/DriverHeadless')
+const {driverSetup} = require('../index.js')
 const sortByNamePath = '../../Scripts/Day1/SortByName'
 
 let script, result, driver = driverSetup('chrome')

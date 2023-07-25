@@ -1,8 +1,7 @@
 const getHomePageTitlePath = '../../Scripts/Day1/GetHomePageTitle'
 const getMobilePageTitlePath = '../../Scripts/Day1/GetMobilePageTitle'
-//const { driverSetup } = require('../../utils/Driver')
-const { driverSetup } = require('../../utils/DriverHeadless')
 const sortByNamePath = '../../Scripts/Day1/SortByName'
+const {driverSetup} = require('../index.js')
 
 let script, result,  driver = driverSetup('firefox')
 

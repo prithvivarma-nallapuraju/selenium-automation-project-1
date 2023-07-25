@@ -8,7 +8,7 @@ let screenshotPath
 const sortByName = async (brwsr, driver) => {
 
     await driver.manage().setTimeouts({ implicit: 10000 })
-
+    
     try{
         const dropdownElement = await driver.wait(until.elementLocated(By.xpath("(//select[@title='Sort By'])[1]")), 5000)
         await driver.wait(until.elementIsVisible(dropdownElement))

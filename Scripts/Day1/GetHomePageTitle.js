@@ -8,7 +8,7 @@ const getHomePageTitle = async (brwsr, folder, drvr) => {
     
     driver = drvr
     await driver.manage().setTimeouts({ implicit: 10000 })
-
+    
     try{
         await driver.manage().window().maximize()
         await driver.get('http://live.techpanda.org/')

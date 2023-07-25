@@ -4,6 +4,9 @@ require('dotenv').config({path: mainpath.join(__dirname,'../../.env')})
 
 
 const getPriceOnSonyPage = async (driver) => {
+    
+    await driver.manage().setTimeouts({ implicit: 10000 })
+    
     try{
 
         const priceElement = await driver.wait(until.elementLocated(By.className('price')))

@@ -10,6 +10,7 @@ const clickOnSony = async (brwsr, folder, driver) => {
 
     await driver.manage().setTimeouts({ implicit: 10000 })
 
+    
     try{
         
         const sonyElement = await driver.wait(until.elementLocated(By.xpath("//a[@title='Xperia']")))

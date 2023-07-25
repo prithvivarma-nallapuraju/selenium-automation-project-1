@@ -10,14 +10,14 @@ const clickOnSony = async (brwsr, folder, driver) => {
 
     await driver.manage().setTimeouts({ implicit: 10000 })
 
-    
+
     try{
         
         const sonyElement = await driver.wait(until.elementLocated(By.xpath("//a[@title='Xperia']")))
         await driver.wait(until.elementIsVisible(sonyElement))
         await sonyElement.click()
 
-        if(process.env.CAPTURE_SCREENSHOTS == 'true'){
+        if(process.env.CAPTURE_SCREENSHOTS === 'true'){
             screenshotPath = mainpath.join(__dirname, `../../outputs/${brwsr}/${folder}`, 'sony_page.png')
             await screenshot(driver, screenshotPath)
         }

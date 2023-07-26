@@ -3,7 +3,7 @@ const {driverSetup, getHomePageTitle, getMobilePageTitle, sortByName} = require(
 let result, driver = driverSetup('edge')
 
 
-describe('verifying the functionalities given on Day1 with edge browser', ()=> {
+describe('verifying the functionalities given on Day 1 with edge browser', ()=> {
     
     test('get the HomePage title using edge browser', async () => {
         result = await getHomePageTitle('Edge', 'Day1', driver)

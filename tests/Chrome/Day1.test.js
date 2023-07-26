@@ -4,7 +4,7 @@ const {driverSetup, getHomePageTitle, getMobilePageTitle, sortByName} = require(
 let result, driver = driverSetup('chrome')
 
 
-describe('verifying the functionalities given on Day1 with chrome browser', ()=> {
+describe('verifying the functionalities given on Day 1 with chrome browser', ()=> {
     
     test('get the HomePage title using chrome browser', async () => {
         result = await getHomePageTitle('Chrome', 'Day1', driver)

@@ -4,7 +4,7 @@ const {driverSetup, getHomePageTitle, getMobilePageTitle, sortByName} = require(
 let result,  driver = driverSetup('firefox')
 
 
-describe('verifying the functionalities given on Day1 with firefox browser', ()=> {
+describe('verifying the functionalities given on Day 1 with firefox browser', ()=> {
 
     test('get the HomePage title using firefox browser', async () => {
         result = await getHomePageTitle('Firefox', 'Day1', driver)

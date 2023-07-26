@@ -8,6 +8,7 @@ on:
       - day1Tests
       - day2Tests
       - day3Tests
+      - day4Tests
 
 jobs:
   test:

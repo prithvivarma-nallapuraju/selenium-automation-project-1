@@ -1,12 +1,13 @@
 const {Builder, Browser} = require('selenium-webdriver')
 
-let driver, options
+let driver
 
 const driverSetup = (brwsr) => {
 
     switch(brwsr){
 
         case "chrome": {
+
             driver =  new Builder()
                             .forBrowser(Browser.CHROME)
                             .build()
@@ -15,6 +16,7 @@ const driverSetup = (brwsr) => {
         }
 
         case "edge": {
+
             driver =  new Builder()
                             .forBrowser(Browser.EDGE)
                             .build()
@@ -23,6 +25,7 @@ const driverSetup = (brwsr) => {
         }
 
         case "firefox": {
+            
             driver = new Builder()
                             .forBrowser(Browser.FIREFOX)
                             .build()
@@ -34,7 +37,6 @@ const driverSetup = (brwsr) => {
 
             driver = new Builder()
                             .forBrowser(Browser.SAFARI)
-                            .setSafariOptions(options)
                             .build()
 
             break

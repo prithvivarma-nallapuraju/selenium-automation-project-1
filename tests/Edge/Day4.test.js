@@ -1,4 +1,4 @@
-const {driverSetup, getHomePageTitle, getMobilePageTitle, clickCompare} = require('../index.js')
+const {driverSetup, getHomePageTitle, getMobilePageTitle, clickCompare, comparePhones} = require('../index.js')
 
 let result, driver = driverSetup('edge')
 
@@ -20,4 +20,11 @@ describe('verifying the functionalities given on Day 4 with Edge browser', ()=> 
         result = await clickCompare('Edge', 'Day4', driver)
         expect(result).toBe(true)
     }, 100000)
+
+    test('compare Iphone and Sony Xperia using Edge browser', async () => {
+        result = await comparePhones('Edge', 'Day4', driver)
+        expect(result).toBe(true)
+    }, 100000)
+
+
 })

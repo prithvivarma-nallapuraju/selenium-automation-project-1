@@ -1,4 +1,4 @@
-const {driverSetup, getHomePageTitle, getMobilePageTitle, clickCompare} = require('../index.js')
+const {driverSetup, getHomePageTitle, getMobilePageTitle, clickCompare, comparePhones} = require('../index.js')
 
 let result, driver = driverSetup('firefox')
 
@@ -18,6 +18,11 @@ describe('verifying the functionalities given on Day 4 with Firefox browser', ()
 
     test('click on add to Compare buttons for Iphone and Sony Xperia using Firefox browser', async () => {
         result = await clickCompare('Firefox', 'Day4', driver)
+        expect(result).toBe(true)
+    }, 100000)
+
+    test('compare Iphone and Sony Xperia using Firefox browser', async () => {
+        result = await comparePhones('Firefox', 'Day4', driver)
         expect(result).toBe(true)
     }, 100000)
 

@@ -4,7 +4,7 @@ const { driverSetup } = require('../../utils/Driver.js')
 let result, driver = driverSetup('safari')
 
 
-describe('verifying the functionalities given on Day1 with safari browser', ()=> {
+describe('verifying the functionalities given on Day 1 with safari browser', ()=> {
     
     test('get the HomePage title using safari browser', async () => {
         result = await getHomePageTitle('Safari', 'Day1', driver)

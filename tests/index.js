@@ -9,6 +9,8 @@ const { getPriceOnSonyPage } = require('../Scripts/Day2/GetPriceOnSonyPage')
 const { sonyAddToCart } = require('../Scripts/Day3/SonyAddToCart')
 const { changeQuantity } = require('../Scripts/Day3/ChangeQuantity')
 const { emptyCart } = require('../Scripts/Day3/EmptyCart')
+const { clickCompare } = require('../Scripts/Day4/ClickCompare')
+const { comparePhones } = require('../Scripts/Day4/comparePhones')
 
 module.exports = {
     driverSetup,
@@ -20,5 +22,7 @@ module.exports = {
     getPriceOnSonyPage,
     sonyAddToCart,
     changeQuantity,
-    emptyCart
+    emptyCart,
+    clickCompare,
+    comparePhones
 }   

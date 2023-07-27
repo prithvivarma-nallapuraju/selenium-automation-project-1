@@ -1,5 +1,5 @@
 const { driverSetup } = require('../../utils/Driver')
-const {getHomePageTitle, getMobilePageTitle} = require('../index.js')
+const {getHomePageTitle, getMobilePageTitle, clickCompare} = require('../index.js')
 
 let result, driver = driverSetup('safari')
 
@@ -17,5 +17,10 @@ describe('verifying the functionalities given on Day 4 with Safari browser', ()=
         expect(result).toBe('Mobile')
     }, 100000)
 
-
+    test('click on add to Compare buttons for Iphone and Sony Xperia using Safari browser', async () => {
+        result = await clickCompare('Safari', 'Day4', driver)
+        expect(result).toBe(true)
+    }, 100000)
+    
+    
 })

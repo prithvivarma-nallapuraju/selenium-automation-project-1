@@ -1,4 +1,4 @@
-const {driverSetup, getHomePageTitle, getMobilePageTitle} = require('../index.js')
+const {driverSetup, getHomePageTitle, getMobilePageTitle, clickCompare} = require('../index.js')
 
 let result, driver = driverSetup('chrome')
 
@@ -16,5 +16,8 @@ describe('verifying the functionalities given on Day 4 with Chrome browser', ()=
         expect(result).toBe('Mobile')
     }, 100000)
 
-
+    test('click on add to Compare buttons for Iphone and Sony Xperia using Chrome browser', async () => {
+        result = await clickCompare('Chrome', 'Day4', driver)
+        expect(result).toBe(true)
+    }, 100000)
 })

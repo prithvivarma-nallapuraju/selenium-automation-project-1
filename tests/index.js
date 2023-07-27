@@ -1,5 +1,5 @@
-//const { driverSetup } = require('../utils/Driver')
-const { driverSetup } = require('../utils/DriverHeadless')
+const { driverSetup } = require('../utils/Driver')
+//const { driverSetup } = require('../utils/DriverHeadless')
 const { getHomePageTitle } = require('../Scripts/Day1/GetHomePageTitle')
 const { getMobilePageTitle } = require('../Scripts/Day1/GetMobilePageTitle')
 const { sortByName } = require('../Scripts/Day1/SortByName')
@@ -9,6 +9,7 @@ const { getPriceOnSonyPage } = require('../Scripts/Day2/GetPriceOnSonyPage')
 const { sonyAddToCart } = require('../Scripts/Day3/SonyAddToCart')
 const { changeQuantity } = require('../Scripts/Day3/ChangeQuantity')
 const { emptyCart } = require('../Scripts/Day3/EmptyCart')
+const { clickCompare } = require('../Scripts/Day4/ClickCompare')
 
 module.exports = {
     driverSetup,
@@ -20,5 +21,6 @@ module.exports = {
     getPriceOnSonyPage,
     sonyAddToCart,
     changeQuantity,
-    emptyCart
+    emptyCart,
+    clickCompare
 }   

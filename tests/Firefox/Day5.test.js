@@ -1,4 +1,4 @@
-const { driverSetup, getHomePageTitle, clickOnMyAccount, accountCreation, login } = require('../index')
+const { driverSetup, getHomePageTitle, clickOnMyAccount, accountCreation, login, goToTV } = require('../index')
 
 let result, driver = driverSetup('firefox')
 
@@ -23,6 +23,11 @@ describe('verifying the functionalities given on day 5', () => {
         result = await login('Firefox', 'Day5', driver, 'prithvivarma2@gmail.com')
         expect(result).toBe('My Account')
     }, 100000)    
+
+    test('add tv to wishlist using Firefox Browser', async () => {
+        result = await goToTV('Firefox', 'Day5', driver)
+        expect(result).toBe(true)
+    }, 100000)
 
 
 })

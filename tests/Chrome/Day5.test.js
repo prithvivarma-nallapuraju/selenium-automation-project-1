@@ -1,4 +1,4 @@
-const { driverSetup, getHomePageTitle, clickOnMyAccount, accountCreation, login } = require('../index')
+const { driverSetup, getHomePageTitle, clickOnMyAccount, accountCreation, login, goToTV } = require('../index')
 
 let result, driver = driverSetup('chrome')
 
@@ -23,6 +23,11 @@ describe('verifying the functionalities given on day 5', () => {
     test('login into your account using Chrome Browser', async () => {
         result = await login('Chrome', 'Day5', driver, 'prithvivarma4@gmail.com')
         expect(result).toBe('My Account')
+    }, 100000)
+
+    test('add tv to wishlist using Chrome Browser', async () => {
+        result = await goToTV('Chrome', 'Day5', driver)
+        expect(result).toBe(true)
     }, 100000)
 
 })

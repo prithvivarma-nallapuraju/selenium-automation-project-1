@@ -15,6 +15,7 @@ const { clickOnMyAccount } = require('../Scripts/Day5/ClickOnMyAccount')
 const { createAccount } = require('../Scripts/Day5/createAccount')
 
 module.exports = {
+   
     driverSetup,
     getHomePageTitle,
     getMobilePageTitle,
@@ -29,4 +30,5 @@ module.exports = {
     comparePhones,
     clickOnMyAccount,
     createAccount
+    
 }   

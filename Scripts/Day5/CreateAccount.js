@@ -7,6 +7,7 @@ require('dotenv').config({path: mainpath.join(__dirname,'../../.env')})
 let screenshotPath
 
 const createAccount = async (brwsr, folder, driver, email) => {
+    
     await driver.manage().setTimeouts({ implicit : 10000 })
 
     try{
@@ -75,7 +76,7 @@ const createAccount = async (brwsr, folder, driver, email) => {
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
             await delay(3000)
-            screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'created_account.png')
+            screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'error_account_creation.png')
             await screenshot(driver, screenshotPath)
         }
 

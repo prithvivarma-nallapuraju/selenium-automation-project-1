@@ -1,4 +1,4 @@
-const { driverSetup, getHomePageTitle, clickOnMyAccount, accountCreation } = require('../index')
+const { driverSetup, getHomePageTitle, clickOnMyAccount, accountCreation, login } = require('../index')
 
 let result, driver = driverSetup('chrome')
 
@@ -19,5 +19,10 @@ describe('verifying the functionalities given on day 5', () => {
         expect(result).toBe(true)
     }, 100000)
 
+    
+    test('login into your account using Chrome Browser', async () => {
+        result = await login('Chrome', 'Day5', driver, 'prithvivarma4@gmail.com')
+        expect(result).toBe('My Account')
+    }, 100000)
 
 })

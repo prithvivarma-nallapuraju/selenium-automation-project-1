@@ -13,6 +13,7 @@ const { clickCompare } = require('../Scripts/Day4/ClickCompare')
 const { comparePhones } = require('../Scripts/Day4/comparePhones')
 const { clickOnMyAccount } = require('../Scripts/Day5/ClickOnMyAccount')
 const { accountCreation } = require('../Scripts/Day5/AccountCreation')
+const { login } = require('../Scripts/Day5/Login')
 
 module.exports = {
    
@@ -29,6 +30,7 @@ module.exports = {
     clickCompare,
     comparePhones,
     clickOnMyAccount,
-    accountCreation
+    accountCreation,
+    login
     
 }   

@@ -1,4 +1,4 @@
-const { driverSetup, getHomePageTitle, clickOnMyAccount, accountCreation } = require('../index')
+const { driverSetup, getHomePageTitle, clickOnMyAccount, accountCreation, login } = require('../index')
 
 let result, driver = driverSetup('edge')
 
@@ -17,6 +17,11 @@ describe('verifying the functionalities given on day 5', () => {
     test('register the account using Edge browser', async () => {
         result = await accountCreation('Edge', 'Day5', driver, 'prithvivarma3@gmail.com')
         expect(result).toBe(true)
+    }, 100000)
+
+    test('login into your account using Edge Browser', async () => {
+        result = await login('Edge', 'Day5', driver, 'prithvivarma3@gmail.com')
+        expect(result).toBe('My Account')
     }, 100000)
 
 

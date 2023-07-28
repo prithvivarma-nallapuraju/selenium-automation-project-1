@@ -24,6 +24,8 @@ const accountCreation = async (brwsr, folder, driver, email) => {
             await screenshot(driver, screenshotPath)
         }
 
+        await delay(1000)
+        
         const firstNameElement = await driver.wait(until.elementLocated(By.id('firstname')))
         await driver.wait(until.elementIsVisible(firstNameElement))
         firstNameElement.clear()

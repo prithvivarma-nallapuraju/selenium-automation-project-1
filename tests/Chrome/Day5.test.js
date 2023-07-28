@@ -1,4 +1,4 @@
-const { driverSetup, getHomePageTitle, clickOnMyAccount, createAccount } = require('../index')
+const { driverSetup, getHomePageTitle, clickOnMyAccount, accountCreation } = require('../index')
 
 let result, driver = driverSetup('chrome')
 
@@ -15,7 +15,7 @@ describe('verifying the functionalities given on day 5', () => {
     }, 100000)
 
     test('register the account using Chrome browser', async () => {
-        result = await createAccount('Chrome', 'Day5', driver, 'prithvivarma4@gmail.com')
+        result = await accountCreation('Chrome', 'Day5', driver, 'prithvivarma4@gmail.com')
         expect(result).toBe(true)
     }, 100000)
 

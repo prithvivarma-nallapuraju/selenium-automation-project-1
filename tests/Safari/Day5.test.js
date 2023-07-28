@@ -1,5 +1,5 @@
 const { driverSetup } = require('../../utils/Driver')
-const { getHomePageTitle, clickOnMyAccount, createAccount } = require('../index')
+const { getHomePageTitle, clickOnMyAccount, accountCreation } = require('../index')
 
 let result, driver = driverSetup('safari')
 
@@ -16,7 +16,7 @@ describe('verifying the functionalities given on day 5', () => {
     }, 100000)
 
     test('register the account using Safari browser', async () => {
-        result = await createAccount('Safari', 'Day5', driver, 'prithvivarma1@gmail.com')
+        result = await accountCreation('Safari', 'Day5', driver, 'prithvivarma1@gmail.com')
         expect(result).toBe(true)
     }, 100000)
 

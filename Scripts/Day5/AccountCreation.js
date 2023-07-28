@@ -6,7 +6,7 @@ require('dotenv').config({path: mainpath.join(__dirname,'../../.env')})
 
 let screenshotPath
 
-const createAccount = async (brwsr, folder, driver, email) => {
+const accountCreation = async (brwsr, folder, driver, email) => {
     
     await driver.manage().setTimeouts({ implicit : 10000 })
 
@@ -90,5 +90,5 @@ const createAccount = async (brwsr, folder, driver, email) => {
 
 
 module.exports = {
-    createAccount
+    accountCreation
 }

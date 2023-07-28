@@ -1,7 +1,7 @@
 const { until, By } = require("selenium-webdriver")
-const { delay } = require("../../utils/Delay")
+const { screenshot } = require('../../utils/Screenshot')
+const { delay } = require('../../utils/Delay')
 const mainpath = require('path')
-const { screenshot } = require("../../utils/Screenshot")
 require('dotenv').config({path: mainpath.join(__dirname,'../../.env')})
 
 let screenshotPath

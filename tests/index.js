@@ -11,8 +11,14 @@ const { changeQuantity } = require('../Scripts/Day3/ChangeQuantity')
 const { emptyCart } = require('../Scripts/Day3/EmptyCart')
 const { clickCompare } = require('../Scripts/Day4/ClickCompare')
 const { comparePhones } = require('../Scripts/Day4/comparePhones')
+const { clickOnMyAccount } = require('../Scripts/Day5/ClickOnMyAccount')
+const { accountCreation } = require('../Scripts/Day5/AccountCreation')
+const { login } = require('../Scripts/Day5/Login')
+const { goToTV } = require('../Scripts/Day5/GoToTV')
+const { shareWishlist } = require('../Scripts/Day5/ShareWishlist')
 
 module.exports = {
+   
     driverSetup,
     getHomePageTitle,
     getMobilePageTitle,
@@ -24,5 +30,11 @@ module.exports = {
     changeQuantity,
     emptyCart,
     clickCompare,
-    comparePhones
+    comparePhones,
+    clickOnMyAccount,
+    accountCreation,
+    login,
+    goToTV,
+    shareWishlist
+    
 }   

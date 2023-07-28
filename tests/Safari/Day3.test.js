@@ -4,7 +4,7 @@ const {getHomePageTitle, getMobilePageTitle, sonyAddToCart, changeQuantity, empt
 let result, driver = driverSetup('safari')
 
 
-describe('verifying the functionalities given on Day1 with Safari browser', ()=> {
+describe('verifying the functionalities given on Day 3 with Safari browser', ()=> {
     
     test('get the HomePage title using Safari browser', async () => {
         result = await getHomePageTitle('Safari', 'Day3', driver)

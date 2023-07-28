@@ -3,7 +3,7 @@ const {driverSetup, getHomePageTitle, getMobilePageTitle, sonyAddToCart, changeQ
 let result, driver = driverSetup('firefox')
 
 
-describe('verifying the functionalities given on Day1 with Firefox browser', ()=> {
+describe('verifying the functionalities given on Day 3 with Firefox browser', ()=> {
     
     test('get the HomePage title using Firefox browser', async () => {
         result = await getHomePageTitle('Firefox', 'Day3', driver)

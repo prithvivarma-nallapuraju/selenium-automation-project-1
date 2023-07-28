@@ -9,8 +9,16 @@ const { getPriceOnSonyPage } = require('../Scripts/Day2/GetPriceOnSonyPage')
 const { sonyAddToCart } = require('../Scripts/Day3/SonyAddToCart')
 const { changeQuantity } = require('../Scripts/Day3/ChangeQuantity')
 const { emptyCart } = require('../Scripts/Day3/EmptyCart')
+const { clickCompare } = require('../Scripts/Day4/ClickCompare')
+const { comparePhones } = require('../Scripts/Day4/comparePhones')
+const { clickOnMyAccount } = require('../Scripts/Day5/ClickOnMyAccount')
+const { accountCreation } = require('../Scripts/Day5/AccountCreation')
+const { login } = require('../Scripts/Day5/Login')
+const { goToTV } = require('../Scripts/Day5/GoToTV')
+const { shareWishlist } = require('../Scripts/Day5/ShareWishlist')
 
 module.exports = {
+   
     driverSetup,
     getHomePageTitle,
     getMobilePageTitle,
@@ -20,5 +28,13 @@ module.exports = {
     getPriceOnSonyPage,
     sonyAddToCart,
     changeQuantity,
-    emptyCart
+    emptyCart,
+    clickCompare,
+    comparePhones,
+    clickOnMyAccount,
+    accountCreation,
+    login,
+    goToTV,
+    shareWishlist
+    
 }   

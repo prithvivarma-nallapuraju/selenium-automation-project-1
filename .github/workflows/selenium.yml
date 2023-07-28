@@ -5,9 +5,12 @@ on:
     branches:
       - main 
       - tests
+      - testSprint2
       - day1Tests
       - day2Tests
       - day3Tests
+      - day4Tests
+      - day5Tests
 
 jobs:
   test:

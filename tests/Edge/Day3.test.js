@@ -3,7 +3,7 @@ const {driverSetup, getHomePageTitle, getMobilePageTitle, sonyAddToCart, changeQ
 let result, driver = driverSetup('edge')
 
 
-describe('verifying the functionalities given on Day1 with Edge browser', ()=> {
+describe('verifying the functionalities given on Day 3 with Edge browser', ()=> {
     
     test('get the HomePage title using Edge browser', async () => {
         result = await getHomePageTitle('Edge', 'Day3', driver)

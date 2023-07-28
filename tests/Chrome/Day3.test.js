@@ -3,7 +3,7 @@ const {driverSetup, getHomePageTitle, getMobilePageTitle, sonyAddToCart, changeQ
 let result, driver = driverSetup('chrome')
 
 
-describe('verifying the functionalities given on Day1 with chrome browser', ()=> {
+describe('verifying the functionalities given on Day 3 with chrome browser', ()=> {
     
     test('get the HomePage title using chrome browser', async () => {
         result = await getHomePageTitle('Chrome', 'Day3', driver)

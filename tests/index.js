@@ -11,6 +11,7 @@ const { changeQuantity } = require('../Scripts/Day3/ChangeQuantity')
 const { emptyCart } = require('../Scripts/Day3/EmptyCart')
 const { clickCompare } = require('../Scripts/Day4/ClickCompare')
 const { comparePhones } = require('../Scripts/Day4/comparePhones')
+const { clickOnMyAccount } = require('../Scripts/Day5/ClickOnMyAccount')
 
 module.exports = {
     driverSetup,
@@ -24,5 +25,6 @@ module.exports = {
     changeQuantity,
     emptyCart,
     clickCompare,
-    comparePhones
+    comparePhones,
+    clickOnMyAccount
 }   

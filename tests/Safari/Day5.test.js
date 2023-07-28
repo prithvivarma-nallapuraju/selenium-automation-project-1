@@ -1,5 +1,5 @@
 const { driverSetup } = require('../../utils/Driver')
-const { getHomePageTitle, clickOnMyAccount, accountCreation, login, goToTV } = require('../index')
+const { getHomePageTitle, clickOnMyAccount, accountCreation, login, goToTV, shareWishlist } = require('../index')
 
 let result, driver = driverSetup('safari')
 
@@ -30,5 +30,9 @@ describe('verifying the functionalities given on day 5', () => {
         expect(result).toBe(true)
     }, 100000)
 
+    test('share wishlist to an email id using Safari browser', async () => {
+        result = await shareWishlist('Safari', 'Day5', driver , 'prithvivarma1@gmail.com')
+        expect(result).toBe(true)
+    }, 100000)
     
 })

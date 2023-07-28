@@ -15,7 +15,7 @@ const { clickOnMyAccount } = require('../Scripts/Day5/ClickOnMyAccount')
 const { accountCreation } = require('../Scripts/Day5/AccountCreation')
 const { login } = require('../Scripts/Day5/Login')
 const { goToTV } = require('../Scripts/Day5/GoToTV')
-
+const { shareWishlist } = require('../Scripts/Day5/ShareWishlist')
 
 module.exports = {
    
@@ -34,6 +34,7 @@ module.exports = {
     clickOnMyAccount,
     accountCreation,
     login,
-    goToTV
+    goToTV,
+    shareWishlist
     
 }   

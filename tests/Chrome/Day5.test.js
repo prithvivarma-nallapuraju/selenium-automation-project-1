@@ -1,4 +1,4 @@
-const { driverSetup, getHomePageTitle, clickOnMyAccount, accountCreation, login, goToTV } = require('../index')
+const { driverSetup, getHomePageTitle, clickOnMyAccount, accountCreation, login, goToTV, shareWishlist } = require('../index')
 
 let result, driver = driverSetup('chrome')
 
@@ -29,5 +29,11 @@ describe('verifying the functionalities given on day 5', () => {
         result = await goToTV('Chrome', 'Day5', driver)
         expect(result).toBe(true)
     }, 100000)
+
+    test('share wishlist to an email id using Chrome browser', async () => {
+        result = await shareWishlist('Chrome', 'Day5', driver , 'prithvivarma4@gmail.com')
+        expect(result).toBe(true)
+    }, 100000)
+
 
 })

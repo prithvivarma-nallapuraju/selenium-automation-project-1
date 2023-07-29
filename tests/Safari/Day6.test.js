@@ -1,4 +1,4 @@
-const { getHomePageTitle, login, goToTV, checkout, shippingInformation } = require('../index')
+const { getHomePageTitle, login, goToTV, checkout, shippingInformation, placeOrder } = require('../index')
 const { driverSetup } = require('../../utils/Driver')
 
 let result, driver = driverSetup('safari')
@@ -29,5 +29,10 @@ describe('Verifying the functionalities given on day 6', () => {
         result = await shippingInformation('Safari', 'Day6', driver)
         expect(result).toBe(true)
     }, 100000)
+
+    test('place the order using Safari Browser', async () => {
+        result = await placeOrder('Safari', 'Day6', driver)
+        expect(result).toBe(true)
+    }, 100000)    
 
 })

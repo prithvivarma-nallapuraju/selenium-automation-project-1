@@ -19,7 +19,7 @@ const emptyCart = async (brwsr, folder, driver) => {
         await emptyCartElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'empty_message.png')
             await screenshot(driver, screenshotPath)
         } 

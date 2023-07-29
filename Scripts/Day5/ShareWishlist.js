@@ -19,7 +19,7 @@ const shareWishlist = async (brwsr, folder, driver, email) => {
         await delay(1000)
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'before_share.png')
             await screenshot(driver, screenshotPath)
         }
@@ -41,7 +41,7 @@ const shareWishlist = async (brwsr, folder, driver, email) => {
         await delay(1000)
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'after_share.png')
             await screenshot(driver, screenshotPath)
         }
@@ -55,7 +55,7 @@ const shareWishlist = async (brwsr, folder, driver, email) => {
         await delay(1000)
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'success_share.png')
             await screenshot(driver, screenshotPath)
         }

@@ -21,7 +21,7 @@ const checkout = async (brwsr, folder, driver) => {
         await delay(1000)
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'my_wishlist.png')
             await screenshot(driver, screenshotPath)
         }
@@ -33,7 +33,7 @@ const checkout = async (brwsr, folder, driver) => {
         await addToCartElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'cart_added.png')
             await screenshot(driver, screenshotPath)
         }
@@ -45,7 +45,7 @@ const checkout = async (brwsr, folder, driver) => {
         await proceedElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'billing_information.png')
             await screenshot(driver, screenshotPath)
         }

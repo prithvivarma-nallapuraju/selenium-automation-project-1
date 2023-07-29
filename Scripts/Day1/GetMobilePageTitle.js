@@ -16,7 +16,7 @@ const getMobilePageTitle = async (brwsr, folder, driver) => {
         await mobileElement.click()
         
         if(process.env.CAPTURE_SCREENSHOTS === 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`, 'mobile_page.png')
             await screenshot(driver, screenshotPath)
         }

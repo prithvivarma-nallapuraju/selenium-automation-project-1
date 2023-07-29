@@ -1,4 +1,4 @@
-const { driverSetup, getHomePageTitle, login, goToTV, checkout } = require('../index')
+const { driverSetup, getHomePageTitle, login, goToTV, checkout, shippingInformation } = require('../index')
 
 let result, driver = driverSetup('firefox')
 
@@ -21,6 +21,11 @@ describe('Verifying the functionalities given on day 6', () => {
 
     test('checkout the wishlist using Firefox Browser', async () => {
         result = await checkout('Firefox', 'Day6', driver)
+        expect(result).toBe(true)
+    }, 100000)
+
+    test('entering the billing information using Firefox Browser', async () => {
+        result = await shippingInformation('Firefox', 'Day6', driver)
         expect(result).toBe(true)
     }, 100000)
 

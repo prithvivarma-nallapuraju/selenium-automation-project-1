@@ -1,4 +1,4 @@
-const { driverSetup, getHomePageTitle, login, goToTV, checkout } = require('../index')
+const { driverSetup, getHomePageTitle, login, goToTV, checkout, shippingInformation } = require('../index')
 
 let result, driver = driverSetup('chrome')
 
@@ -21,6 +21,11 @@ describe('Verifying the functionalities given on day 6', () => {
 
     test('checkout the wishlist using Chrome Browser', async () => {
         result = await checkout('Chrome', 'Day6', driver)
+        expect(result).toBe(true)
+    }, 100000)
+
+    test('entering the billing information using Chrome Browser', async () => {
+        result = await shippingInformation('Chrome', 'Day6', driver)
         expect(result).toBe(true)
     }, 100000)
 

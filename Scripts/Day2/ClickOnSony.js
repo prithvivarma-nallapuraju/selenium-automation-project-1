@@ -18,7 +18,7 @@ const clickOnSony = async (brwsr, folder, driver) => {
         await sonyElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS === 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`, 'sony_page.png')
             await screenshot(driver, screenshotPath)
         }

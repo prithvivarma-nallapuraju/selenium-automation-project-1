@@ -16,7 +16,7 @@ const sortByName = async (brwsr, driver) => {
         await dropdownElement.sendKeys('Name')
         
         if(process.env.CAPTURE_SCREENSHOTS === 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/Day1`, 'sort_by_name.png')
             await screenshot(driver, screenshotPath)
         }
@@ -26,7 +26,7 @@ const sortByName = async (brwsr, driver) => {
         await descendingElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS === 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/Day1`, 'descending_sort.png')
             await screenshot(driver, screenshotPath)
         }

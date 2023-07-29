@@ -1,4 +1,4 @@
-const { driverSetup, getHomePageTitle, login, goToTV, checkout } = require('../index')
+const { driverSetup, getHomePageTitle, login, goToTV, checkout, shippingInformation } = require('../index')
 
 let result, driver = driverSetup('edge')
 
@@ -21,6 +21,11 @@ describe('Verifying the functionalities given on day 6', () => {
 
     test('checkout the wishlist using Edge Browser', async () => {
         result = await checkout('Edge', 'Day6', driver)
+        expect(result).toBe(true)
+    }, 100000)
+
+    test('entering the billing information using Edge Browser', async () => {
+        result = await shippingInformation('Edge', 'Day6', driver)
         expect(result).toBe(true)
     }, 100000)
 

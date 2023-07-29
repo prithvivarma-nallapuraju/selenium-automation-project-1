@@ -40,7 +40,7 @@ const login = async (brwsr, folder, driver, email) => {
         await passwordElement.sendKeys('Dummy@01')
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'account_details.png')
             await screenshot(driver, screenshotPath)
         }
@@ -52,7 +52,7 @@ const login = async (brwsr, folder, driver, email) => {
         await loginElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'logged_in.png')
             await screenshot(driver, screenshotPath)
         }

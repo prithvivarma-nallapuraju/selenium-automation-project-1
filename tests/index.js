@@ -1,5 +1,5 @@
-//const { driverSetup } = require('../utils/Driver')
-const { driverSetup } = require('../utils/DriverHeadless')
+const { driverSetup } = require('../utils/Driver')
+//const { driverSetup } = require('../utils/DriverHeadless')
 const { getHomePageTitle } = require('../Scripts/Day1/GetHomePageTitle')
 const { getMobilePageTitle } = require('../Scripts/Day1/GetMobilePageTitle')
 const { sortByName } = require('../Scripts/Day1/SortByName')
@@ -17,6 +17,7 @@ const { login } = require('../Scripts/Day5/Login')
 const { goToTV } = require('../Scripts/Day5/GoToTV')
 const { shareWishlist } = require('../Scripts/Day5/ShareWishlist')
 const { checkout } = require('../Scripts/Day6/Checkout')
+const { shippingInformation } = require('../Scripts/Day6/ShippingInformation')
 
 
 
@@ -39,6 +40,7 @@ module.exports = {
     login,
     goToTV,
     shareWishlist,
-    checkout
+    checkout,
+    shippingInformation
     
 }   

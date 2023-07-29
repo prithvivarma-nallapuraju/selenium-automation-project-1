@@ -19,7 +19,7 @@ const accountCreation = async (brwsr, folder, driver, email) => {
         await createAccountElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'before_details.png')
             await screenshot(driver, screenshotPath)
         }
@@ -65,7 +65,7 @@ const accountCreation = async (brwsr, folder, driver, email) => {
         await delay(1000)
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'after_details.png')
             await screenshot(driver, screenshotPath)
         }
@@ -77,7 +77,7 @@ const accountCreation = async (brwsr, folder, driver, email) => {
         await registerElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'error_account_creation.png')
             await screenshot(driver, screenshotPath)
         }

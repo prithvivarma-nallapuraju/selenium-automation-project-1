@@ -1,5 +1,5 @@
-const { driverSetup } = require('../utils/Driver')
-//const { driverSetup } = require('../utils/DriverHeadless')
+//const { driverSetup } = require('../utils/Driver')
+const { driverSetup } = require('../utils/DriverHeadless')
 const { getHomePageTitle } = require('../Scripts/Day1/GetHomePageTitle')
 const { getMobilePageTitle } = require('../Scripts/Day1/GetMobilePageTitle')
 const { sortByName } = require('../Scripts/Day1/SortByName')

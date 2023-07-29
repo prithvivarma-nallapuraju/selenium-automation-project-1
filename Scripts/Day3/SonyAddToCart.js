@@ -19,7 +19,7 @@ const sonyAddToCart = async (brwsr, folder, driver) => {
         await addToCartElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'add_to_cart.png')
             await screenshot(driver, screenshotPath)
         }

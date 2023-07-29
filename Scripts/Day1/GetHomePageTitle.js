@@ -15,7 +15,7 @@ const getHomePageTitle = async (brwsr, folder, drvr) => {
         await driver.get('http://live.techpanda.org/')
         
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'home_page.png')
             await screenshot(driver, screenshotPath)
         }

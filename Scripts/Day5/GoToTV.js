@@ -19,7 +19,7 @@ const goToTV = async (brwsr, folder, driver) => {
         tvElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'tv_page.png')
             await screenshot(driver, screenshotPath)
         }
@@ -31,7 +31,7 @@ const goToTV = async (brwsr, folder, driver) => {
         wishListElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'wishlist_added.png')
             await screenshot(driver, screenshotPath)
         }

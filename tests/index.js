@@ -18,7 +18,7 @@ const { goToTV } = require('../Scripts/Day5/GoToTV')
 const { shareWishlist } = require('../Scripts/Day5/ShareWishlist')
 const { checkout } = require('../Scripts/Day6/Checkout')
 const { shippingInformation } = require('../Scripts/Day6/ShippingInformation')
-const { placeOrder } = require('../Scripts/Day6/placeOrder')
+const { orderPlace } = require('../Scripts/Day6/OrderPlace')
 
 
 module.exports = {
@@ -42,6 +42,6 @@ module.exports = {
     shareWishlist,
     checkout,
     shippingInformation,
-    placeOrder
+    orderPlace
     
 }   

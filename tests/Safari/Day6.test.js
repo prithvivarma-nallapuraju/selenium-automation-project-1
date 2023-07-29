@@ -1,4 +1,4 @@
-const { getHomePageTitle, login, goToTV, checkout, shippingInformation, placeOrder } = require('../index')
+const { getHomePageTitle, login, goToTV, checkout, shippingInformation, orderPlace } = require('../index')
 const { driverSetup } = require('../../utils/Driver')
 
 let result, driver = driverSetup('safari')

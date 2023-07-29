@@ -1,4 +1,4 @@
-const { driverSetup, getHomePageTitle, login, goToTV, checkout, shippingInformation, placeOrder } = require('../index')
+const { driverSetup, getHomePageTitle, login, goToTV, checkout, shippingInformation, orderPlace } = require('../index')
 
 let result, driver = driverSetup('edge')
 

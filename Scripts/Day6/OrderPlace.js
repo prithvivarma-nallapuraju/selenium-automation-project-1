@@ -6,7 +6,7 @@ require('dotenv').config({path: mainpath.join(__dirname,'../../.env')})
 
 let screenshotPath
 
-const placeOrder = async (brwsr, folder, driver) => {
+const orderPlace = async (brwsr, folder, driver) => {
 
     await driver.manage().setTimeouts({ implicit : 10000})
 
@@ -57,5 +57,5 @@ const placeOrder = async (brwsr, folder, driver) => {
 }
 
 module.exports = {
-    placeOrder
+    orderPlace
 }

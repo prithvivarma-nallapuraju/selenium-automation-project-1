@@ -31,7 +31,7 @@ describe('Verifying the functionalities given on day 6', () => {
     }, 100000)
 
     test('place the order using Safari Browser', async () => {
-        result = await placeOrder('Safari', 'Day6', driver)
+        result = await orderPlace('Safari', 'Day6', driver)
         expect(result).toBe(true)
     }, 100000)    
 

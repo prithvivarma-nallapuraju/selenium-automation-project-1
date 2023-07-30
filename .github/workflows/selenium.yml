@@ -7,6 +7,7 @@ on:
       - tests
       - testSprint2
       - testSprint3
+      - testSprint4
       - day1Tests
       - day2Tests
       - day3Tests
@@ -14,6 +15,7 @@ on:
       - day5Tests
       - day6Tests
       - day7Tests
+      - day8Tests
 
 jobs:
   test:

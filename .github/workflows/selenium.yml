@@ -13,6 +13,7 @@ on:
       - day4Tests
       - day5Tests
       - day6Tests
+      - day7Tests
 
 jobs:
   test:

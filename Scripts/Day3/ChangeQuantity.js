@@ -21,7 +21,7 @@ const changeQuantity = async (brwsr, folder, driver) => {
         await quantityElement.sendKeys(1000)
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'changeQuantity.png')
             await screenshot(driver, screenshotPath)
         }        
@@ -31,7 +31,7 @@ const changeQuantity = async (brwsr, folder, driver) => {
         await updateElement.click()
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'error_message.png')
             await screenshot(driver, screenshotPath)
         }

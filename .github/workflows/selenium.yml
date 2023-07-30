@@ -6,11 +6,14 @@ on:
       - main 
       - tests
       - testSprint2
+      - testSprint3
       - day1Tests
       - day2Tests
       - day3Tests
       - day4Tests
       - day5Tests
+      - day6Tests
+      - day7Tests
 
 jobs:
   test:

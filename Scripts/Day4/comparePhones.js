@@ -14,19 +14,19 @@ const comparePhones = async (brwsr, folder, driver) => {
 
         const mainTabHandle = await driver.getWindowHandle()
 
-        await delay(2000)
+        await delay(1000)
         const compareElement = await driver.wait(until.elementLocated(By.xpath("//button[contains(@title, 'Compare') and @class='button']")))
         await driver.wait(until.elementIsVisible(compareElement))
         await compareElement.click()
         
-        await delay(2000)
+        await delay(1000)
         driver.getAllWindowHandles().then(handles => {
             const newTabHandle = handles[handles.length-1]
             driver.switchTo().window(newTabHandle)
         })
         
         if(process.env.CAPTURE_SCREENSHOTS=='true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'final_comparison.png')
             await screenshot(driver, screenshotPath)
         }

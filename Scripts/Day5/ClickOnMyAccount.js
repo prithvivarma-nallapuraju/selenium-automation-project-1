@@ -21,7 +21,7 @@ const clickOnMyAccount = async (brwsr, folder, driver) => {
         await delay(1000)
 
         if(process.env.CAPTURE_SCREENSHOTS == 'true'){
-            await delay(3000)
+            await delay(1000)
             screenshotPath = mainpath.join(__dirname, `../../Outputs/${brwsr}/${folder}`,'my_account.png')
             await screenshot(driver, screenshotPath)
         }

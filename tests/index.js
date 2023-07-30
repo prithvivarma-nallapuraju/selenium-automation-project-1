@@ -16,6 +16,11 @@ const { accountCreation } = require('../Scripts/Day5/AccountCreation')
 const { login } = require('../Scripts/Day5/Login')
 const { goToTV } = require('../Scripts/Day5/GoToTV')
 const { shareWishlist } = require('../Scripts/Day5/ShareWishlist')
+const { checkout } = require('../Scripts/Day6/Checkout')
+const { shippingInformation } = require('../Scripts/Day6/ShippingInformation')
+const { orderPlace } = require('../Scripts/Day6/OrderPlace')
+const { reorder } = require('../Scripts/Day7/ReOrder')
+
 
 module.exports = {
    
@@ -35,6 +40,10 @@ module.exports = {
     accountCreation,
     login,
     goToTV,
-    shareWishlist
+    shareWishlist,
+    checkout,
+    shippingInformation,
+    orderPlace,
+    reorder
     
 }   
